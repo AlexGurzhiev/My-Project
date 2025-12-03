@@ -5,288 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revo Coffee Việt Nam</title>
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            display: flex;
-            min-height: 100vh;
-            background-color: #f5f5f5;
-        }
-
-        /* Левая часть с баннером */
-        .banner {
-            flex: 1;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 30px;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .banner-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
-
-        .logo {
-            position: absolute;
-            top: 30px;
-            left: 30px;
-            z-index: 1;
-        }
-
-            .logo img {
-                height: 40px;
-                width: auto;
-            }
-
-        /* Правая часть с меню и контентом */
-        .content {
-            width: 70%;
-            padding: 30px;
-            overflow-y: auto;
-            background-color: blanchedalmond;
-        }
-
-        /* Меню справа */
-        .sidebar {
-            position: fixed;
-            right: 30px;
-            top: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            height: 450px;
-            width: 180px;
-        }
-
-        .cart {
-            margin-bottom: 30px;
-        }
-
-            .cart img {
-                height: 30px;
-                width: auto;
-            }
-
-        .menu {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-        }
-
-        .menu-item {
-            margin-bottom: 40px;
-            font-size: 20px;
-            color: #333;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-            .menu-item:hover {
-                color: #8B4513;
-            }
-
-        /* Основные разделы */
-        .section {
-            margin-bottom: 60px;
-            max-width: 800px;
-        }
-
-        .section-title {
-            font-size: 24px;
-            margin-bottom: 30px;
-            color: #333;
-            border-bottom: 2px solid #8B4513;
-            padding-bottom: 10px;
-            display: inline-block;
-        }
-
-        /* Сетка товаров */
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .product {
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-            .product:hover {
-                transform: translateY(-5px);
-            }
-
-        .product-image {
-            height: 400px;
-            background-color: #f0f0f0;
-            overflow: hidden;
-        }
-
-            .product-image img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-        .product-content {
-            padding: 20px;
-        }
-
-        .product-title {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .product-description {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
-
-        .product-price {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .current-price {
-            font-size: 18px;
-            font-weight: bold;
-            color: #8B4513;
-            margin-right: 10px;
-        }
-
-        .original-price {
-            font-size: 14px;
-            color: #999;
-            text-decoration: line-through;
-        }
-
-        .product-buttons {
-            display: flex;
-        }
-
-        .product-btn {
-            flex: 1;
-            padding: 8px 0;
-            text-align: center;
-            text-decoration: none;
-            border: 1px solid #8B4513;
-            color: #8B4513;
-            font-size: 14px;
-            transition: all 0.3s;
-        }
-
-            .product-btn:first-child {
-                border-radius: 4px 0 0 4px;
-                border-right: none;
-            }
-
-            .product-btn:last-child {
-                border-radius: 0 4px 4px 0;
-            }
-
-            .product-btn:hover {
-                background-color: #8B4513;
-                color: white;
-            }
-
-        /* Секция Build Your Base */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-
-        .feature {
-            background-color: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-            .feature h3 {
-                font-size: 18px;
-                margin-bottom: 15px;
-                color: #333;
-            }
-
-            .feature p {
-                font-size: 14px;
-                color: #666;
-                line-height: 1.6;
-            }
-        /* Секция Build Your Base с изображениями */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-
-        .feature {
-            background-color: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .feature-image {
-            height: 120px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-            .feature-image img {
-                max-height: 100%;
-                max-width: 100%;
-                object-fit: contain;
-            }
-
-        .feature h3 {
-            font-size: 18px;
-            margin-bottom: 15px;
-            color: #333;
-        }
-
-        .feature p {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.6;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <!-- Левая часть с баннером -->
     <div class="banner">
-        <img src="assets/img/banner.png" alt="Revo Coffee" class="banner-bg">
+        <img src="assets/img/banner.png" alt="Revo Coffee" class="banner__bg">
         <div class="logo">
-            <img src="assets/img/LOGO.png" alt="REVO COFFEE">
+            <img src="assets/img/LOGO.png" alt="REVO COFFEE" class="logo__img">
         </div>
     </div>
 
@@ -295,208 +21,236 @@
         <!-- Меню справа -->
         <div class="sidebar">
             <div class="cart">
-                <img src="assets/img/shopping-cart-3.png" alt="Cart">
+                <img class="cart__img" src="assets/img/shopping-cart-3.png" alt="Корзина">
             </div>
             <div class="menu">
-                <a href="#" class="menu-item">ГЛАВНАЯ СТРАНИЦА</a>
-                <a href="#" class="menu-item">КОФЕ</a>
-                <a href="#" class="menu-item">ЦВЕТНАЯ ПЛЕНКА С ПОКРЫТИЕМ</a>
-                <a href="#" class="menu-item">КОМБО-НАБОРЫ</a>
-                <a href="#" class="menu-item">ПОДАРОЧНЫЕ НАБОРЫ</a>
-                <a href="#" class="menu-item">КОНТАКТЫ</a>
+                <a href="#" class="menu-item">TRANG CHỦ</a>
+                <a href="#" class="menu-item">COFFEE</a>
+                <a href="#" class="menu-item">PHIN MẠ MÀU</a>
+                <a href="#" class="menu-item">COMBO PHIN PHÊ</a>
+                <a href="#" class="menu-item">GIFTSET</a>
+                <a href="#" class="menu-item">LIÊN HỆ</a>
             </div>
         </div>
 
         <!-- Секция Build Your Base -->
         <div class="section">
-            <h2 class="section-title">Всё начинается с кофе</h2>
+            <h2 class="section-title">COFFEE BUILD YOUR BASE</h2>
             <div class="features">
                 <div class="feature">
-                    <div class="feature-image">
-                        <img src="assets/img/ic.png" alt="Nguồn gốc">
+                    <div class="feature__image">
+                        <img src="assets/img/ic.png" alt="Источник" class="feature__img">
                     </div>
-                    <h3>Источник</h3>
-                    <p>Кофейные зерна арабики и робусты соответствуют международным стандартам качества.</p>
+                    <h3>Nguồn gốc</h3>
+                    <p>Những hạt cà phê Arabica, Robusta đạt chất lượng theo tiêu chuẩn quốc tế.</p>
                 </div>
                 <div class="feature">
-                    <div class="feature-image">
-                        <img src="assets/img/IC-2.png" alt="Các loại hạt">
+                    <div class="feature__image">
+                        <img src="assets/img/IC-2.png" alt="Виды зерен" class="feature__img">
                     </div>
-                    <h3>Орехи</h3>
-                    <p>Качество чашки кофе на 70% зависит от происхождения и качества зеленых зерен.</p>
+                    <h3>Các loại hạt</h3>
+                    <p>70% chất lượng tách cà phê đến từ nguồn gốc và chất lượng green bean.</p>
                 </div>
                 <div class="feature">
-                    <div class="feature-image">
-                        <img src="assets/img/IC-1.png" alt="Chất lượng">
+                    <div class="feature__image">
+                        <img src="assets/img/IC-1.png" alt="Качество" class="feature__img">
                     </div>
-                    <h3>Качество</h3>
-                    <p>Каждое кофейное зерно — это процесс высокой концентрации усилий кофейных мастеров.</p>
+                    <h3>Chất lượng</h3>
+                    <p>Từng một hạt cà phê là cả một quá trình tập trung cao độ của nghệ nhân cà phê.</p>
                 </div>
                 <div class="feature">
-                    <div class="feature-image">
-                        <img src="assets/img/IC-3.png" alt="Pha chế">
+                    <div class="feature__image">
+                        <img src="assets/img/IC-3.png" alt="Приготовление" class="feature__img">
                     </div>
-                    <h3>Бармен</h3>
-                    <p>Кофейные зерна подвергаются тщательной и тщательной обжарке.</p>
+                    <h3>Pha chế</h3>
+                    <p>Những hạt cà phê được lột xác qua quá trình rang xay kỹ lưỡng và nghiêm ngặt.</p>
                 </div>
             </div>
-        </div>
+        </section>
+
         <!-- Секция Choose Your Favorite -->
         <div class="section">
-            <h2 class="section-title">Выберите свой любимый</h2>
+            <h2 class="section-title">CHUẨN GU ĐÚNG VỊ - Choose Your Favorite</h2>
             <div class="products">
                 <div class="product">
-                    <div class="product-image">
-                        <img src="assets/img/IMAGE.png" alt="REVO Morning">
+                    <div class="product__image">
+                        <img class="product__img" src="assets/img/IMAGE.png" alt="REVO Morning">
                     </div>
                     <div class="product-content">
                         <h3 class="product-title">REVO Morning</h3>
-                        <p class="product-description">горький, сладковатый привкус, цветочный аромат</p>
+                        <p class="product-description">đắng, hậu ngọt, hương hoa</p>
                         <div class="product-price">
                             <span class="current-price">99.000</span>
                         </div>
                         <div class="product-buttons">
-                            <a href="#" class="product-btn">КУПИТЬ СЕЙЧАС</a>
-                            <a href="#" class="product-btn">ДЕТАЛИ</a>
+                            <a href="#" class="product-btn">MUA NGAY</a>
+                            <a href="#" class="product-btn">CHI TIẾT</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="product">
-                    <div class="product-image">
-                        <img src="assets/img/IMAGE-2.png" alt="REVO Everyday">
+                    <div class="product__image">
+                        <img class="product__img" src="assets/img/IMAGE-2.png" alt="REVO Everyday">
                     </div>
                     <div class="product-content">
                         <h3 class="product-title">REVO Everyday</h3>
-                        <p class="product-description">сбалансированный, горьковатый привкус, шоколадный вкус</p>
+                        <p class="product-description">cân bằng, hậu đắng, vị chocolate</p>
                         <div class="product-price">
                             <span class="current-price">85.000</span>
                         </div>
                         <div class="product-buttons">
-                            <a href="#" class="product-btn">КУПИТЬ СЕЙЧАС</a>
-                            <a href="#" class="product-btn">ДЕТАЛИ</a>
+                            <a href="#" class="product-btn">MUA NGAY</a>
+                            <a href="#" class="product-btn">CHI TIẾT</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="product">
-                    <div class="product-image">
-                        <img src="assets/img/image-1.png" alt="REVO Origin">
+                    <div class="product__image">
+                        <img class="product__img" src="assets/img/image-1.png" alt="REVO Origin">
                     </div>
                     <div class="product-content">
                         <h3 class="product-title">REVO Origin</h3>
-                        <p class="product-description">Сладковатое послевкусие, немного горьковатое, кисло-клубничное.</p>
+                        <p class="product-description">hậu ngọt, ít đắng, vị chua dâu</p>
                         <div class="product-price">
                             <span class="current-price">139.000</span>
                         </div>
                         <div class="product-buttons">
-                            <a href="#" class="product-btn">КУПИТЬ СЕЙЧАС</a>
-                            <a href="#" class="product-btn">ДЕТАЛИ</a>
+                            <a href="#" class="product-btn">MUA NGAY</a>
+                            <a href="#" class="product-btn">CHI TIẾT</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="product">
-                    <div class="product-image">
-                        <img src="assets/img/IMAGE-3.png" alt="REVO Đậm Đà">
+                    <div class="product__image">
+                        <img class="product__img" src="assets/img/IMAGE-3.png" alt="REVO Đậm Đà">
                     </div>
                     <div class="product-content">
                         <h3 class="product-title">REVO Đậm Đà</h3>
-                        <p class="product-description">насыщенный, горький, традиционный</p>
+                        <p class="product-description">đậm đà, đắng, truyền thống</p>
                         <div class="product-price">
                             <span class="current-price">75.000</span>
                         </div>
                         <div class="product-buttons">
-                            <a href="#" class="product-btn">КУПИТЬ СЕЙЧАС</a>
-                            <a href="#" class="product-btn">ДЕТАЛИ</a>
+                            <a href="#" class="product-btn">MUA NGAY</a>
+                            <a href="#" class="product-btn">CHI TIẾT</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Секция Giftset -->
         <div class="section">
-            <h2 class="section-title">ПОДАРОЧНЫЕ НАБОРЫ</h2>
+            <h2 class="section-title">GIFTSET</h2>
             <div class="products">
                 <div class="product">
-                    <div class="product-image">
-                        <img src="assets/img/pr-0018-r.png" alt="Giftset Cà phê phin Việt Nam">
+                    <div class="product__image">
+                        <img class="product__img" src="assets/img/pr-0018-r.png" alt="Подарочный набор Вьетнамский фильтрованный кофе">
                     </div>
                     <div class="product-content">
-                        <h3 class="product-title">Подарочный набор «Вьетнамский фильтрованный кофе»</h3>
-                        <p class="product-description">Отличный подарок для ценителей кофе.</p>
+                        <h3 class="product-title">Giftset "Cà phê phin Việt Nam"</h3>
+                        <p class="product-description">Món quà tuyệt vời dành cho người sành cà phê.</p>
                         <div class="product-price">
                             <span class="current-price">285.000</span>
                         </div>
                         <div class="product-buttons">
-                            <a href="#" class="product-btn">КУПИТЬ СЕЙЧАС</a>
-                            <a href="#" class="product-btn">ДЕТАЛИ</a>
+                            <a href="#" class="product-btn">MUA NGAY</a>
+                            <a href="#" class="product-btn">CHI TIẾT</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Секция Combo -->
         <div class="section">
-            <h2 class="section-title">КОМБО НАБОРЫ</h2>
+            <h2 class="section-title">COMBO PHIN PHÊ</h2>
             <div class="products">
                 <div class="product">
-                    <div class="product-image">
-                        <img src="assets/img/image-6.png" alt="Combo Revo Đậm Đà">
+                    <div class="product__image">
+                        <img class="product__img" src="assets/img/image-6.png" alt="Combo Revo Đậm Đà">
                     </div>
                     <div class="product-content">
                         <h3 class="product-title">Combo Revo Đậm Đà</h3>
-                        <p class="product-description">Содержание кофеина в Revo Strong достаточно велико, чтобы поддерживать бодрость и работоспособность...</p>
+                        <p class="product-description">Hàm lượng caffein trong Revo Đậm Đà đủ mạnh để làm bạn tỉnh táo làm việc...</p>
                         <div class="product-price">
                             <span class="current-price">147.000</span>
                             <span class="original-price">155.000</span>
                         </div>
                         <div class="product-buttons">
-                            <a href="#" class="product-btn">КУПИТЬ СЕЙЧАС</a>
-                            <a href="#" class="product-btn">ДЕТАЛИ</a>
+                            <a href="#" class="product-btn">MUA NGAY</a>
+                            <a href="#" class="product-btn">CHI TIẾT</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="product">
-                    <div class="product-image">
-                        <img src="assets/img/image-7.png" alt="Combo Revo Everyday">
+                    <div class="product__image">
+                        <img class="product__img" src="assets/img/image-7.png" alt="Combo Revo Everyday">
                     </div>
                     <div class="product-content">
                         <h3 class="product-title">Combo Revo Everyday</h3>
-                        <p class="product-description">Revo Everyday — это сочетание горького вкуса зерен Робусты и аромата...</p>
+                        <p class="product-description">Revo Everyday được phối trộn giữa vị đắng của hạt Robusta và hương thơm...</p>
                         <div class="product-price">
                             <span class="current-price">156.000</span>
                             <span class="original-price">165.000</span>
                         </div>
                         <div class="product-buttons">
-                            <a href="#" class="product-btn">КУПИТЬ СЕЙЧАС</a>
-                            <a href="#" class="product-btn">ДЕТАЛИ</a>
+                            <a href="#" class="product-btn">MUA NGAY</a>
+                            <a href="#" class="product-btn">CHI TIẾT</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="product">
-                    <div class="product-image">
-                        <img src="assets/img/image-8.png" alt="Combo Revo Honey">
+                    <div class="product__image">
+                        <img class="product__img" src="assets/img/image-8.png" alt="Combo Revo Honey">
                     </div>
                     <div class="product-content">
                         <h3 class="product-title">Combo Revo Honey</h3>
-                        <p class="product-description">Мёд – название Revo Honey происходит от метода обработки зерен арабики...</p>
+                        <p class="product-description">Honey – trong tên gọi Revo Honey đến từ phương pháp chế biến hạt Arabica...</p>
                         <div class="product-price">
                             <span class="current-price">275.000</span>
                             <span class="original-price">260.000</span>
                         </div>
                         <div class="product-buttons">
-                            <a href="#" class="product-btn">КУПИТЬ СЕЙЧАС</a>
-                            <a href="#" class="product-btn">ДЕТАЛИ</a>
+                            <a href="#" class="product-btn">MUA NGAY</a>
+                            <a href="#" class="product-btn">CHI TIẾT</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+<!-- Секция Contact -->
+        <section class="section" id="contact">
+            <h2 class="section__title">КОНТАКТЫ</h2>
+            <div class="contact-info">
+                <p>Свяжитесь с нами для заказа или вопросов</p>
+                <!-- Здесь можно добавить контактную информацию -->
+            </div>
+        </section>
     </div>
+<script>
+// Плавная прокрутка для якорных ссылок
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if(targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if(targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 50,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+</script>
 </body>
 </html>
