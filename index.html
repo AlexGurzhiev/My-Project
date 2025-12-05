@@ -23,68 +23,69 @@
             <div class="cart">
                 <img class="cart__img" src="assets/img/shopping-cart-3.png" alt="Корзина">
             </div>
-            <div class="menu">
-                <a href="#" class="menu-item">TRANG CHỦ</a>
-                <a href="#" class="menu-item">COFFEE</a>
-                <a href="#" class="menu-item">PHIN MẠ MÀU</a>
-                <a href="#" class="menu-item">COMBO PHIN PHÊ</a>
-                <a href="#" class="menu-item">GIFTSET</a>
-                <a href="#" class="menu-item">LIÊN HỆ</a>
-            </div>
+            <nav class="menu">
+                <a href="#home" class="menu__item">ГЛАВНАЯ СТРАНИЦА</a>
+                <a href="#coffee" class="menu__item">КОФЕ</a>
+                <a href="#phin" class="menu__item">ФИЛЬТР С ПОКРЫТИЕМ</a>
+                <a href="#giftset" class="menu__item">ПОДАРОЧНЫЕ НАБОРЫ</a>
+                <a href="#combo" class="menu__item">КОМБО-НАБОРЫ</a>
+                <a href="#contact" class="menu__item">КОНТАКТЫ</a>
+            </nav>
         </div>
 
         <!-- Секция Build Your Base -->
-        <div class="section">
-            <h2 class="section-title">COFFEE BUILD YOUR BASE</h2>
+        <section class="section" id="home">
+            <h2 class="section__title">Всё начинается с кофе</h2>
             <div class="features">
                 <div class="feature">
                     <div class="feature__image">
                         <img src="assets/img/ic.png" alt="Источник" class="feature__img">
                     </div>
-                    <h3>Nguồn gốc</h3>
-                    <p>Những hạt cà phê Arabica, Robusta đạt chất lượng theo tiêu chuẩn quốc tế.</p>
+                    <h3 class="feature__title">Источник</h3>
+                    <p class="feature__description">Кофейные зерна арабики и робусты соответствуют международным стандартам качества.</p>
                 </div>
                 <div class="feature">
                     <div class="feature__image">
                         <img src="assets/img/IC-2.png" alt="Виды зерен" class="feature__img">
                     </div>
-                    <h3>Các loại hạt</h3>
-                    <p>70% chất lượng tách cà phê đến từ nguồn gốc và chất lượng green bean.</p>
+                    <h3 class="feature__title">Виды зерен</h3>
+                    <p class="feature__description">Качество чашки кофе на 70% зависит от происхождения и качества зеленых зерен.</p>
                 </div>
                 <div class="feature">
                     <div class="feature__image">
                         <img src="assets/img/IC-1.png" alt="Качество" class="feature__img">
                     </div>
-                    <h3>Chất lượng</h3>
-                    <p>Từng một hạt cà phê là cả một quá trình tập trung cao độ của nghệ nhân cà phê.</p>
+                    <h3 class="feature__title">Качество</h3>
+                    <p class="feature__description">Каждое кофейное зерно — это процесс высокой концентрации усилий кофейных мастеров.</p>
                 </div>
                 <div class="feature">
                     <div class="feature__image">
                         <img src="assets/img/IC-3.png" alt="Приготовление" class="feature__img">
                     </div>
-                    <h3>Pha chế</h3>
-                    <p>Những hạt cà phê được lột xác qua quá trình rang xay kỹ lưỡng và nghiêm ngặt.</p>
+                    <h3 class="feature__title">Приготовление</h3>
+                    <p class="feature__description">Кофейные зерна подвергаются тщательной обжарке и помолу.</p>
                 </div>
             </div>
         </section>
 
         <!-- Секция Choose Your Favorite -->
-        <div class="section">
-            <h2 class="section-title">CHUẨN GU ĐÚNG VỊ - Choose Your Favorite</h2>
+        <section class="section" id="coffee">
+            <h2 class="section__title">Выберите свой любимый</h2>
             <div class="products">
                 <div class="product">
                     <div class="product__image">
                         <img class="product__img" src="assets/img/IMAGE.png" alt="REVO Morning">
                     </div>
-                    <div class="product-content">
-                        <h3 class="product-title">REVO Morning</h3>
-                        <p class="product-description">đắng, hậu ngọt, hương hoa</p>
-                        <div class="product-price">
-                            <span class="current-price">99.000</span>
+                    <div class="product__content">
+
+                        <h3 class="product__title">REVO Morning</h3>
+                        <p class="product__description">горький, сладковатый привкус, цветочный аромат</p>
+                        <div class="product__price">
+                            <span class="product__current-price">99.000</span>
                         </div>
-                        <div class="product-buttons">
-                            <a href="#" class="product-btn">MUA NGAY</a>
-                            <a href="#" class="product-btn">CHI TIẾT</a>
+                        <div class="product__actions">
+                            <a href="#" class="button button--buy">КУПИТЬ СЕЙЧАС</a>
+                            <a href="#" class="button button--details">ДЕТАЛИ</a>
                         </div>
                     </div>
                 </div>
@@ -93,15 +94,15 @@
                     <div class="product__image">
                         <img class="product__img" src="assets/img/IMAGE-2.png" alt="REVO Everyday">
                     </div>
-                    <div class="product-content">
-                        <h3 class="product-title">REVO Everyday</h3>
-                        <p class="product-description">cân bằng, hậu đắng, vị chocolate</p>
-                        <div class="product-price">
-                            <span class="current-price">85.000</span>
+                    <div class="product__content">
+                        <h3 class="product__title">REVO Everyday</h3>
+                        <p class="product__description">сбалансированный, горьковатый привкус, шоколадный вкус</p>
+                        <div class="product__price">
+                            <span class="product__current-price">85.000</span>
                         </div>
-                        <div class="product-buttons">
-                            <a href="#" class="product-btn">MUA NGAY</a>
-                            <a href="#" class="product-btn">CHI TIẾT</a>
+                        <div class="product__actions">
+                            <a href="#" class="button button--buy">КУПИТЬ СЕЙЧАС</a>
+                            <a href="#" class="button button--details">ДЕТАЛИ</a>
                         </div>
                     </div>
                 </div>
@@ -110,15 +111,15 @@
                     <div class="product__image">
                         <img class="product__img" src="assets/img/image-1.png" alt="REVO Origin">
                     </div>
-                    <div class="product-content">
-                        <h3 class="product-title">REVO Origin</h3>
-                        <p class="product-description">hậu ngọt, ít đắng, vị chua dâu</p>
-                        <div class="product-price">
-                            <span class="current-price">139.000</span>
+                    <div class="product__content">
+                        <h3 class="product__title">REVO Origin</h3>
+                        <p class="product__description">Сладковатое послевкусие, немного горьковатое, кисло-клубничное</p>
+                        <div class="product__price">
+                            <span class="product__current-price">139.000</span>
                         </div>
-                        <div class="product-buttons">
-                            <a href="#" class="product-btn">MUA NGAY</a>
-                            <a href="#" class="product-btn">CHI TIẾT</a>
+                        <div class="product__actions">
+                            <a href="#" class="button button--buy">КУПИТЬ СЕЙЧАС</a>
+                            <a href="#" class="button button--details">ДЕТАЛИ</a>
                         </div>
                     </div>
                 </div>
@@ -127,15 +128,15 @@
                     <div class="product__image">
                         <img class="product__img" src="assets/img/IMAGE-3.png" alt="REVO Đậm Đà">
                     </div>
-                    <div class="product-content">
-                        <h3 class="product-title">REVO Đậm Đà</h3>
-                        <p class="product-description">đậm đà, đắng, truyền thống</p>
-                        <div class="product-price">
-                            <span class="current-price">75.000</span>
+                    <div class="product__content">
+                        <h3 class="product__title">REVO Đậm Đà</h3>
+                        <p class="product__description">насыщенный, горький, традиционный</p>
+                        <div class="product__price">
+                            <span class="product__current-price">75.000</span>
                         </div>
-                        <div class="product-buttons">
-                            <a href="#" class="product-btn">MUA NGAY</a>
-                            <a href="#" class="product-btn">CHI TIẾT</a>
+                        <div class="product__actions">
+                            <a href="#" class="button button--buy">КУПИТЬ СЕЙЧАС</a>
+                            <a href="#" class="button button--details">ДЕТАЛИ</a>
                         </div>
                     </div>
                 </div>
@@ -143,22 +144,24 @@
         </section>
 
         <!-- Секция Giftset -->
-        <div class="section">
-            <h2 class="section-title">GIFTSET</h2>
+        <section class="section" id="giftset">
+            <h2 class="section__title">ПОДАРОЧНЫЕ НАБОРЫ</h2>
             <div class="products">
                 <div class="product">
                     <div class="product__image">
                         <img class="product__img" src="assets/img/pr-0018-r.png" alt="Подарочный набор Вьетнамский фильтрованный кофе">
+
+                        Alexander G., [03.12.2025 15:25]
                     </div>
-                    <div class="product-content">
-                        <h3 class="product-title">Giftset "Cà phê phin Việt Nam"</h3>
-                        <p class="product-description">Món quà tuyệt vời dành cho người sành cà phê.</p>
-                        <div class="product-price">
-                            <span class="current-price">285.000</span>
+                    <div class="product__content">
+                        <h3 class="product__title">Подарочный набор «Вьетнамский фильтрованный кофе»</h3>
+                        <p class="product__description">Отличный подарок для ценителей кофе.</p>
+                        <div class="product__price">
+                            <span class="product__current-price">285.000</span>
                         </div>
-                        <div class="product-buttons">
-                            <a href="#" class="product-btn">MUA NGAY</a>
-                            <a href="#" class="product-btn">CHI TIẾT</a>
+                        <div class="product__actions">
+                            <a href="#" class="button button--buy">КУПИТЬ СЕЙЧАС</a>
+                            <a href="#" class="button button--details">ДЕТАЛИ</a>
                         </div>
                     </div>
                 </div>
@@ -166,23 +169,23 @@
         </section>
 
         <!-- Секция Combo -->
-        <div class="section">
-            <h2 class="section-title">COMBO PHIN PHÊ</h2>
+        <section class="section" id="combo">
+            <h2 class="section__title">КОМБО НАБОРЫ</h2>
             <div class="products">
                 <div class="product">
                     <div class="product__image">
                         <img class="product__img" src="assets/img/image-6.png" alt="Combo Revo Đậm Đà">
                     </div>
-                    <div class="product-content">
-                        <h3 class="product-title">Combo Revo Đậm Đà</h3>
-                        <p class="product-description">Hàm lượng caffein trong Revo Đậm Đà đủ mạnh để làm bạn tỉnh táo làm việc...</p>
-                        <div class="product-price">
-                            <span class="current-price">147.000</span>
-                            <span class="original-price">155.000</span>
+                    <div class="product__content">
+                        <h3 class="product__title">Combo Revo Đậm Đà</h3>
+                        <p class="product__description">Содержание кофеина в Revo Strong достаточно велико, чтобы поддерживать бодрость и работоспособность...</p>
+                        <div class="product__price">
+                            <span class="product__current-price">147.000</span>
+                            <span class="product__old-price">155.000</span>
                         </div>
-                        <div class="product-buttons">
-                            <a href="#" class="product-btn">MUA NGAY</a>
-                            <a href="#" class="product-btn">CHI TIẾT</a>
+                        <div class="product__actions">
+                            <a href="#" class="button button--buy">КУПИТЬ СЕЙЧАС</a>
+                            <a href="#" class="button button--details">ДЕТАЛИ</a>
                         </div>
                     </div>
                 </div>
@@ -191,16 +194,16 @@
                     <div class="product__image">
                         <img class="product__img" src="assets/img/image-7.png" alt="Combo Revo Everyday">
                     </div>
-                    <div class="product-content">
-                        <h3 class="product-title">Combo Revo Everyday</h3>
-                        <p class="product-description">Revo Everyday được phối trộn giữa vị đắng của hạt Robusta và hương thơm...</p>
-                        <div class="product-price">
-                            <span class="current-price">156.000</span>
-                            <span class="original-price">165.000</span>
+                    <div class="product__content">
+                        <h3 class="product__title">Combo Revo Everyday</h3>
+                        <p class="product__description">Revo Everyday — это сочетание горького вкуса зерен Робусты и аромата...</p>
+                        <div class="product__price">
+                            <span class="product__current-price">156.000</span>
+                            <span class="product__old-price">165.000</span>
                         </div>
-                        <div class="product-buttons">
-                            <a href="#" class="product-btn">MUA NGAY</a>
-                            <a href="#" class="product-btn">CHI TIẾT</a>
+                        <div class="product__actions">
+                            <a href="#" class="button button--buy">КУПИТЬ СЕЙЧАС</a>
+                            <a href="#" class="button button--details">ДЕТАЛИ</a>
                         </div>
                     </div>
                 </div>
@@ -209,23 +212,22 @@
                     <div class="product__image">
                         <img class="product__img" src="assets/img/image-8.png" alt="Combo Revo Honey">
                     </div>
-                    <div class="product-content">
-                        <h3 class="product-title">Combo Revo Honey</h3>
-                        <p class="product-description">Honey – trong tên gọi Revo Honey đến từ phương pháp chế biến hạt Arabica...</p>
-                        <div class="product-price">
-                            <span class="current-price">275.000</span>
-                            <span class="original-price">260.000</span>
+                    <div class="product__content">
+                        <h3 class="product__title">Combo Revo Honey</h3>
+                        <p class="product__description">Мёд – название Revo Honey происходит от метода обработки зерен арабики...</p>
+                        <div class="product__price">
+                            <span class="product__current-price">275.000</span>
+                            <span class="product__old-price">260.000</span>
                         </div>
-                        <div class="product-buttons">
-                            <a href="#" class="product-btn">MUA NGAY</a>
-                            <a href="#" class="product-btn">CHI TIẾT</a>
+                        <div class="product__actions">
+                            <a href="#" class="button button--buy">КУПИТЬ СЕЙЧАС</a>
+                            <a href="#" class="button button--details">ДЕТАЛИ</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-<!-- Секция Contact -->
         <section class="section" id="contact">
             <h2 class="section__title">КОНТАКТЫ</h2>
             <div class="contact-info">
@@ -234,23 +236,5 @@
             </div>
         </section>
     </div>
-<script>
-// Плавная прокрутка для якорных ссылок
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if(targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if(targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 50,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-</script>
 </body>
 </html>
